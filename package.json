@@ -1,0 +1,19 @@
+{
+  "name": "jstry",
+  "version": "1.0.0",
+  "description": "Safe chaining of properties",
+  "main": "try.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sixsixteen/jstry.git"
+  },
+  "author": "616",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sixsixteen/jstry/issues"
+  },
+  "homepage": "https://github.com/sixsixteen/jstry#readme"
+}
