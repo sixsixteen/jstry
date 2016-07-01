@@ -11,7 +11,15 @@ Object.defineProperty(Object.prototype, "try", {
   value: function(x) {
     return Object.defineProperty(typeof this[x] === "object" ? this[x] : {} , "unwrap", {
       set: function(value) { this[x] = value }.bind(this),
-      get: function() { return function() { return this[x] }.bind(this) }.bind(this),
+      get: function() {
+        return function(undefinedFallbackValue) {
+          if (undefinedFallbackValue !== undefined && this[x] === undefined) {
+            return undefinedFallbackValue
+          }
+
+          return this[x]
+        }.bind(this)
+      }.bind(this),
       configurable: true
     })
   }
